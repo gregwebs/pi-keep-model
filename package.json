@@ -1,0 +1,48 @@
+{
+  "name": "pi-keep-model",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Keep the active pi model across /new, so a model chosen mid-session is not reset to the default.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "model"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregwebs/pi-keep-model.git"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "pi": {
+    "extensions": [
+      "./src/keep-model-on-new.ts"
+    ]
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.99.2",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
